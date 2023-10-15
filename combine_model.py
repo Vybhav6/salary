@@ -5,9 +5,11 @@ import io
 # Define your model functions here
 def convert_salaries(input_file):
     # Your 'convert_salaries' function code
+    pass
 
 def calculate_statistics(input_file):
     # Your 'calculate_statistics' function code
+    pass
 
 def combined_model(input_file):
     convert_salaries(input_file)
