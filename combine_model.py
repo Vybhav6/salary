@@ -5,7 +5,7 @@ import csv
 
 # Define your model functions here
 def convert_salaries(input_file):
-    columns_to_keep = ['WAGE_RATE_OF_PAY_FROM', 'WAGE_UNIT_OF_PAY']
+    columns_to keep = ['WAGE_RATE_OF_PAY_FROM', 'WAGE_UNIT_OF_PAY']
     conversion_rates = {
         'Year': 1,
         'Month': 12,
@@ -31,7 +31,7 @@ def convert_salaries(input_file):
         wage_column_index = header_indices['WAGE_RATE_OF_PAY_FROM']
         unit_column_index = header_indices['WAGE_UNIT_OF_PAY']
 
-        writer.writerow(columns_to_keep)
+        writer.writerow(columns_to keep)
 
         for row in reader:
             wage_str = row[wage_column_index]
@@ -77,9 +77,9 @@ def calculate_statistics(input_file):
 
     median_salary = (salaries[total_records // 2] + salaries[total_records // 2 - 1]) / 2 if total_records % 2 == 0 else salaries[total_records // 2]
 
-    percentile_25 = salaries[int(total_records * 0.25)]
+    percentile_25 = salaries[int(total_records * 0.25]
 
-    percentile_75 = salaries[int(total_records * 0.75)]
+    percentile_75 = salaries[int(total_records * 0.75]
 
     mean_salary = total_salary / total_records
 
@@ -112,9 +112,5 @@ if uploaded_file is not None:
     st.success("Processing complete!")
 
     # Display the results
-    st.write("Processed Data:")
-    df = pd.read_csv('temp_input.csv')
-    st.write(df)
-    
     st.write("Model Results:")
     st.write(statistics)
