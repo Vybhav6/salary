@@ -5,7 +5,7 @@ import csv
 
 # Define your model functions here
 def convert_salaries(input_file):
-    columns_to keep = ['WAGE_RATE_OF_PAY_FROM', 'WAGE_UNIT_OF_PAY']
+    columns_to_keep = ['WAGE_RATE_OF_PAY_FROM', 'WAGE_UNIT_OF_PAY']
     conversion_rates = {
         'Year': 1,
         'Month': 12,
@@ -31,7 +31,7 @@ def convert_salaries(input_file):
         wage_column_index = header_indices['WAGE_RATE_OF_PAY_FROM']
         unit_column_index = header_indices['WAGE_UNIT_OF_PAY']
 
-        writer.writerow(columns_to keep)
+        writer.writerow(columns_to_keep)
 
         for row in reader:
             wage_str = row[wage_column_index]
