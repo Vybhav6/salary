@@ -77,9 +77,9 @@ def calculate_statistics(input_file):
 
     median_salary = (salaries[total_records // 2] + salaries[total_records // 2 - 1]) / 2 if total_records % 2 == 0 else salaries[total_records // 2]
 
-    percentile_25 = salaries[int(total_records * 0.25]
+    percentile_25 = salaries[int(total_records * 0.25)]
 
-    percentile_75 = salaries[int(total_records * 0.75]
+    percentile_75 = salaries[int(total_records * 0.75)]
 
     mean_salary = total_salary / total_records
 
